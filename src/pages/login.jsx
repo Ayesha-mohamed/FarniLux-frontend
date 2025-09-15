@@ -37,7 +37,8 @@ import Footer from "../components/footer";
         {/* Buttons */}
         <div className="flex justify-center gap-10 ">
           <button onClick={()=> setActiveTab === "customer"} className={`${activeTab === "customer" ? "text-blue-600" : ""}`} >Customer</button>
-          <button  onClick={()=> setActiveTab("admin")} className={`${activeTab === "admin" ? "text-blue-600" : ""}`} >Admin</button>
+          <button onClick={()=> setActiveTab === "admin"} className={`${activeTab === "admin" ? "text-blue-600" : ""}`} >Admin</button>
+          {/* <button  onClick={()=> setActiveTab("admin")} className={`${activeTab === "admin" ? "text-blue-600" : ""}`} >Admin</button> */}
 
           {/* <button onClick={()=> setActiveTab === "admin"} >admin</button> */}
         </div>
