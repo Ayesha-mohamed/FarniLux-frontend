@@ -19,7 +19,7 @@ function Shop(props) {
     }
 
     const handleRead = () =>{
-        axios.get("http://localhost:3000/read/allproduct").then((res)=>{
+        axios.get("https://farnilux-backend.onrender.com/read/allproduct").then((res)=>{
             setData(res.data)
         })
     }
@@ -35,7 +35,7 @@ function Shop(props) {
             handleRead()
             return
         }
-        axios.get(`http://localhost:3000/search/product/${key}`).then((res)=>{
+        axios.get(`https://farnilux-backend.onrender.com/search/product/${key}`).then((res)=>{
             setData(res.data)
         }).catch((err)=>{
             console.log(err);
@@ -98,7 +98,7 @@ function Shop(props) {
                         <i className="fa-solid fa-star text-gray-400"></i>
                         <i className="fa-solid fa-star text-gray-400"></i>
                 </div> */}
-                <img className='w-72 h-80 object-cover  mb-5' src={`http://localhost:3000/allproductimage/${item.prImage}`} alt={item.prImage} />
+                <img className='w-72 h-80 object-cover  mb-5' src={`https://farnilux-backend.onrender.com/allproductimage/${item.prImage}`} alt={item.prImage} />
                <div className="text-center flex justify-around mt-3 ">
                <h1 className='text-xl font-semibold'>{item.name}</h1>
                 <h1 className='text-2xl font-semibold text-red-600  '>${item.price}</h1>  

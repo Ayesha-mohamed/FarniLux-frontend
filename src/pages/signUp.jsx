@@ -19,8 +19,8 @@ function SignUp() {
     e.preventDefault();
     const links =
       activeTab === "customer"
-        ? "http://localhost:3000/create/user"
-        : "http://localhost:3000/create/admin";
+        ? "https://farnilux-backend.onrender.com/create/user"
+        : "https://farnilux-backend.onrender.com/create/admin";
     const info =
       activeTab === "customer"
         ? { name, email, address, phone, password }

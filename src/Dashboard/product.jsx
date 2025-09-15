@@ -10,7 +10,7 @@ function Product(props) {
     const [product, setProduct] = useState([])
 
     const handleReadProduct = () =>{
-        axios.get("http://localhost:3000/read/allproduct").then((res) =>{
+        axios.get("https://farnilux-backend.onrender.com/read/allproduct").then((res) =>{
             setProduct(res.data)
         })
     }
@@ -20,7 +20,7 @@ function Product(props) {
     },[])
 
     const handleDelete = (id) =>{
-        axios.delete(`http://localhost:3000/delete/product/${id}`).then(()=>{
+        axios.delete(`https://farnilux-backend.onrender.com/delete/product/${id}`).then(()=>{
             toast.success("Deleted successfully")
             handleReadProduct()
         }).catch((err)=>{
@@ -37,7 +37,7 @@ function Product(props) {
                 return <>
                 
                  <div className="w-80 h-96 shadow-md shadow-gray-600  ">  
-            <img className='w-full h-60  ' src={`http://localhost:3000/allproductimage/${item.prImage}`} alt={item.prImage} />
+            <img className='w-full h-60  ' src={`https://farnilux-backend.onrender.com/allproductimage/${item.prImage}`} alt={item.prImage} />
             <div className="flex justify-between px-4 mt-3">
                 <h1 className='textt-xl font-semibold '>{item.name}</h1>
                 <h1 className='text-xl font-medium text-red-700'>${item.price}</h1>

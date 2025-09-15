@@ -16,7 +16,7 @@ import Footer from "../components/footer";
 
   const handleLogIn = (e) =>{
     e.preventDefault()
-    const links = activeTab === "customer" ? "http://localhost:3000/create/userlogin" : "http://localhost:3000/login/admin"
+    const links = activeTab === "customer" ? "https://farnilux-backend.onrender.com/create/userlogin" : "https://farnilux-backend.onrender.com/login/admin"
     const info = activeTab === "customer" ? {email: email, password: password} : {email: email, password: password}
     axios.post(links, info).then((res)=>{
       toast.success(`${activeTab}login success`)

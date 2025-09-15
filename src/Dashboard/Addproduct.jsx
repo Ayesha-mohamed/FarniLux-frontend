@@ -19,7 +19,7 @@ function Addproduct(props) {
 
     const handleSubmit = (e)=>{
         e.preventDefault()
-        axios.post("http://localhost:3000/create/product", productData).then(()=>{
+        axios.post("https://farnilux-backend.onrender.com/create/product", productData).then(()=>{
             
             toast.success("successfully")
             setTimeout(()=>{

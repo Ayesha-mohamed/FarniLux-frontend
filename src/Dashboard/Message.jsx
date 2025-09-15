@@ -7,7 +7,7 @@ function Message(props) {
     const [message, setMessage] = useState([])
 
     const handlePost = () =>{
-        axios.get("http://localhost:3000/read/contact").then((res)=>{
+        axios.get("https://farnilux-backend.onrender.com/read/contact").then((res)=>{
             setMessage(res.data)
         })
     }

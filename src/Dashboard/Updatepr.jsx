@@ -107,7 +107,7 @@ function UpdateProduct() {
     }
 
     // ✅ Correct axios.put usage (send form data, headers in config)
-    axios.put(`http://localhost:3000/update/product/${id}`, productData, {
+    axios.put(`https://farnilux-backend.onrender.com/update/product/${id}`, productData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       },
@@ -125,7 +125,7 @@ function UpdateProduct() {
   const params = useParams();
 
   const handleReadSingleData = () => {
-    axios.get(`http://localhost:3000/read/singleproduct/${params.id}`)
+    axios.get(`https://farnilux-backend.onrender.com/read/singleproduct/${params.id}`)
   .then((res) => {
     const product = Array.isArray(res.data) ? res.data[0] : res.data;
     if (!product) {
@@ -160,7 +160,7 @@ function UpdateProduct() {
           {image && typeof image === "string" && (
             <div className="mb-3">
               <p className='text-sm text-gray-600'>Current Image:</p>
-              <img src={`http://localhost:3000/uploads/${image}`} alt="product" className="w-32 h-32 object-cover rounded-lg border mb-2" />
+              <img src={`https://farnilux-backend.onrender.com/uploads/${image}`} alt="product" className="w-32 h-32 object-cover rounded-lg border mb-2" />
             </div>
           )}
 
