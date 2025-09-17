@@ -186,7 +186,7 @@
 
 // export default Cart
 
-///
+
 
 import { useEffect, useState } from "react";
 import axios from "axios";  
@@ -289,8 +289,13 @@ function Cart() {
                                 >
                                     {/* Product Details */}
                                     <div className="flex items-center gap-4 w-full md:w-40">
+                                        {/* <img
+                                            // src={`https://farnilux-backend.onrender.com/allproductimage/${item.prImage}`}
+                                            alt=""
+                                            className="w-20 h-20 object-contain"
+                                        /> */}
                                         <img
-                                            src={`https://farnilux-backend.onrender.com/allproductimage/${item.prImage}`}
+                                            src={`http://localhost:3000/allproductimage/${item.prImage}`}
                                             alt=""
                                             className="w-20 h-20 object-contain"
                                         />
@@ -370,8 +375,9 @@ function Cart() {
                   <ToastContainer position="top-right" autoClose={2000} />
 
         </>
+}
 
   
-}
+
 
 export default Cart

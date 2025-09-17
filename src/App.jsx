@@ -6,14 +6,19 @@ import Contact from "./pages/Contact"
 import Shop from "./pages/Shop"
 import Cart from "./pages/Cart"
 import Addproduct from "./Dashboard/Addproduct"
-import Dashboard from "./Dashboard/Dashboard"
-import Reports from "./Dashboard/Reports"
-import Details from "./pages/Details"
-import Product from "./Dashboard/product"
+// import Dashboard from "./Dashboard/Dashboard"
+// import Reports from "./Dashboard/Reports"
+// import Product from "./Dashboard/product"
 import LogIn from "./pages/login"
 import SignUp from "./pages/signUp"
 import UpdateProduct from "./Dashboard/Updatepr"
-import Message from "./Dashboard/Message"
+// import Message from "./Dashboard/Message"
+
+import Description from "./pages/describtion"
+
+import DashboardChart from "./Dashboard/Chart"
+import AdminProducts from "./Dashboard/Adminproduct"
+
 
 
 
@@ -30,16 +35,16 @@ function Mainlayout({children}){
 }
 
 
-function Dashboardlayout({children}){
-    return <>
-    <div className="k">
-        <Dashboard />
-        <div className="k">
-            {children}
-        </div>
-    </div>
-    </>
-} 
+// function Dashboardlayout({children}){
+//     return <>
+//     <div className="k">
+//         <Dashboard />
+//         <div className="k">
+//             {children}
+//         </div>
+//     </div>
+//     </>
+// } 
 
 const App = () =>{
     return <>
@@ -85,51 +90,67 @@ const App = () =>{
                 <SignUp />
             </Mainlayout>
             } />
-        <Route path="/details" element={
-            <Mainlayout>
-                <Details />
-            </Mainlayout>
-            } />
+    
         <Route path="/login" element={
             <Mainlayout>
                 <LogIn />
             </Mainlayout>
             } />
+        {/* <Route path="/ProductPage" element={
+            <Mainlayout>
+                <ProductPage />
+            </Mainlayout>
+            } /> */}
         <Route path="/signup" element={
             <Mainlayout>
                 <SignUp />
             </Mainlayout>
             } />
+
+
+            <Route path="/desc/:id" element={
+            <Mainlayout>
+                <Description />
+            </Mainlayout>
+            } />
+
+
+        {/* <Route path="/details" element={
+            <Mainlayout>
+                <Detail />
+            </Mainlayout>
+            } /> */}
         
 
+
 {/*dashboard */}
-            <Route path="/dashboard" element={
+            {/* <Route path="/dashboard" element={
             <Dashboardlayout>
                 <Reports />
             </Dashboardlayout>
-            } />
+            } /> */}
 
             <Route path="/addproduct" element={
-            <Dashboardlayout>
+          
                 <Addproduct />
-            </Dashboardlayout>
             } />
-            <Route path="/product" element={
+            {/* <Route path="/product" element={
             <Dashboardlayout>
                 <Product />
             </Dashboardlayout>
-            } />
+            } /> */}
             <Route path="/update/product/:id" element={
-            <Dashboardlayout>
                 <UpdateProduct />
-            </Dashboardlayout>
             } />
-
+{/* 
             <Route path="/message" element={
             <Dashboardlayout>
                 <Message />
             </Dashboardlayout>
-            } />
+            } /> */}
+
+            <Route path='/dashboard' element={<DashboardChart />} />
+            <Route path='/adminproduct' element={<AdminProducts />} />
 
     </Routes>
    
